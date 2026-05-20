@@ -1,0 +1,85 @@
+name: lunaire
+description: "Lunaire - A mood-based diary app where the moon reflects your emotions."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Firebase
+  firebase_core: ^2.27.0
+  firebase_auth: ^4.17.8
+  cloud_firestore: ^4.15.8
+  firebase_storage: ^11.6.9
+  firebase_messaging: ^14.7.19
+
+  # State management
+  provider: ^6.1.2
+
+  # Local storage
+  shared_preferences: ^2.2.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # UI / animations
+  google_fonts: ^6.2.1
+  lottie: ^3.1.0
+  fl_chart: ^0.66.2
+
+  # Media
+  image_picker: ^1.0.7
+  video_player: ^2.8.3
+  cached_network_image: ^3.3.1
+
+  # Security
+  local_auth: ^2.2.0
+  flutter_secure_storage: ^9.0.0
+  encrypt: ^5.0.3
+
+  # AI - uses Gemini (newer version with systemInstruction support)
+  google_generative_ai: ^0.4.7
+
+  # Utils
+  intl: ^0.19.0
+  uuid: ^4.3.3
+  permission_handler: ^11.3.0
+  path_provider: ^2.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  flutter_launcher_icons: ^0.13.1
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.8
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+
+# App icon configuration — generates launcher icons for Android & iOS
+# from a single PNG file at assets/icons/app_icon.png
+# Run: dart run flutter_launcher_icons
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_icon.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
+  # Adaptive icon (Android 8+) — background color + foreground icon
+  adaptive_icon_background: "#0A0E1F"  # Lunaire dark sky
+  adaptive_icon_foreground: "assets/icons/app_icon.png"
+  # Web icon (for future)
+  web:
+    generate: true
+    image_path: "assets/icons/app_icon.png"
+    background_color: "#0A0E1F"
+    theme_color: "#5C6BC0"
